@@ -22,6 +22,149 @@ p {
   margin: 0;
 }
 
-#page-section {
+h2 { 
+  grid-area: section-subheading;
+  color: darkgray;  
+}
+
+.title {
+  width: 400px;
+  background-color: #A3D2C3;
+}
+
+/* nav bar */
+
+h1 {
+  grid-area: webpage-title;
+}
+
+header {
+  background-color: #676767;
+  padding: 20px 20px 20px 0px;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "webpage-title webpage-title webpage-title webpage-title navbar"
+  ;
+  grid-gap: 10px;
+}
+
+ul {
+  grid-area: navbar;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+/* banner */
+
+.hero-banner h2 {
+  background-color: #A3D2C3;
+  width: 300px;
+  text-align: center;
+}
+
+.hero-banner {
+  background-image: url("../images/02-hero-bg.jpg");
+  padding: 20px;
+}
+
+/* page sections */
+
+#about, #work, #contact {
+  padding: 40px 40px 40px 10px;
+}
+
+/* about section */
+
+.p { grid-area: about-text; }
+
+#about {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "section-subheading about-text"
+  ;
+  grid-gap: 10px;
+}
+
+/* projects section */
+
+.project-1, .project-2, .project-3, .project-4, .project-5 {
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.project-1 { 
+  grid-area: project1; 
+  background-image: url("../images/02-portfolio-1.jpg");
+  
+}
+.project-2 { 
+  grid-area: project2; 
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+.project-3 { 
+  grid-area: project3; 
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+.project-4 { 
+  grid-area: project4; 
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+.project-5 { 
+  grid-area: project5; 
+  background-image: url("../images/02-run-buddy.jpg");
+}
+
+#work {
+  display: grid;
+  width: 100%;
+  height: 700px;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "section-subheading project1 project1"
+    "section-subheading project2 project3"
+    "section-subheading project4 project5"
+  ;
+  grid-gap: 10px;
+}
+
+/* contact section */
+
+.email { grid-area: email;}
+.linkedin {grid-area: linkedin;}
+.github {grid-area: github;}
+
+#contact {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 200px 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "section-subheading email linkedin github"
+  ;
+  grid-gap: 10px;
 }
