@@ -53,6 +53,7 @@ h1 {
   grid-area: webpage-title;
   text-align: right;
   padding-right: 10px;
+  resize: none;
 }
 
 header {
@@ -114,7 +115,6 @@ li a:hover {
 .hero-banner h2 {
   grid-area: heading-text;
   background-color: var(--teal);
-  width: 300px;
   text-align: center;
   margin-left: 200px;
   margin-top: 150px;
