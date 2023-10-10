@@ -22,10 +22,10 @@ h1, h2, p {
   color: var(--grey);
 }
 
-p {
+/* p {
   margin: 0;
   
-}
+} */
 
 h2 { 
   grid-area: section-subheading;
@@ -36,7 +36,7 @@ h2 {
   background-color: #A3D2C3;
 }
 
-/* colour pallette */
+/* colour palette */
 
 :root {
   --teal: #A3D2C3;
@@ -47,7 +47,7 @@ h2 {
   );
 }
 
-/* nav bar / heading */
+/* nav bar */
 
 h1 {
   grid-area: webpage-title;
@@ -93,11 +93,31 @@ li a:hover {
   color: var(--grey);
 }
 
+/* page sections */
+
+#about, #work {
+  padding: 40px 40px 0px 10px;
+}
+
+#contact { padding: 40px 40px 40px 10px; }
+
 /* banner */
 
+.profile-img {
+  grid-area: profile-img;
+  height: 200px;
+  border-radius: 50%;
+  margin-left: 100px;
+  margin-top: 15px;
+}
+
 .hero-banner h2 {
+  grid-area: heading-text;
   background-color: var(--teal);
   width: 300px;
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 150px;
 }
 
 .hero-banner {
@@ -106,21 +126,11 @@ li a:hover {
   background-position: center center;
   background-repeat: no-repeat;
   height: 250px;
-  display: flex;
-  justify-content: right;
-  align-items: end;
-  text-align: center;
-  padding-right: 50px;
-  padding-bottom: 25px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
 }
-
-/* page sections */
-
-#about, #work {
-  padding: 40px 40px 0px 10px;
-}
-
-#contact { padding: 40px 40px 40px 10px; }
 
 /* about section */
 
@@ -165,7 +175,7 @@ li a:hover {
   border: 5pt solid var(--teal);
   display: grid;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .tile a {
