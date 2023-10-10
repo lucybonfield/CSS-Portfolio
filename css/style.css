@@ -102,6 +102,9 @@ li a:hover {
 
 .hero-banner {
   background-image: url("../images/02-hero-bg.jpg");
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
   height: 250px;
   display: flex;
   justify-content: right;
@@ -113,9 +116,11 @@ li a:hover {
 
 /* page sections */
 
-#about, #work, #contact {
-  padding: 40px 40px 40px 10px;
+#about, #work {
+  padding: 40px 40px 0px 10px;
 }
+
+#contact { padding: 40px 40px 40px 10px; }
 
 /* about section */
 
@@ -134,46 +139,56 @@ li a:hover {
 
 /* projects section */
 
-.project-1, .project-2, .project-3, .project-4, .project-5, .hero-banner {
-  background-size: cover; 
-  background-position: center center;
-  background-repeat: no-repeat;
+#project-1 { grid-area: project1; }
+#project-2 { grid-area: project2; }
+#project-3 { grid-area: project3; }
+#project-4 { grid-area: project4; }
+#project-5 { grid-area: project5; }
+
+#work {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "section-subheading project1 project1"
+    "section-subheading project2 project3"
+    "section-subheading project4 project5"
+  ;
+  width: 100%;
+  height: 100px;
 }
 
-.project-1, .project-2, .project-3, .project-4, .project-5 {
+.tile {
+  position: relative;
+  width: 100%;
   border: 5pt solid var(--teal);
-  opacity: .5;
+  display: grid;
   cursor: pointer;
+  opacity: 0.5;
 }
 
-.project-1:hover, .project-2:hover, .project-3:hover, .project-4:hover, .project-5:hover { 
+.tile a {
+  grid-row: 1; /* place in first row */
+  grid-column: 1;  /* place in first column */
+}
+
+.tile img {
+  object-fit: cover;
+  display: block;
+  height: 200px;
+  width: 100%;
+}
+
+.tile h3 {
+  position: absolute;
+  bottom: 30px;
+  background-color: var(--teal);
+  padding: 10px;
+}
+
+.tile:hover {
   opacity: 1;
-}
-
-.project-1 { 
-  grid-area: project1; 
-  background: url("../images/02-portfolio-1.jpg");
-  background-size: cover; 
-}
-.project-2 { 
-  grid-area: project2; 
-  background: url("../images/02-portfolio-2.jpg");
-  background-size: cover; 
-}
-.project-3 { 
-  grid-area: project3; 
-  background: url("../images/02-portfolio-3.jpg");
-  background-size: cover; 
-}
-.project-4 { 
-  grid-area: project4; 
-  background: url("../images/02-portfolio-4.jpg");
-  background-size: cover; 
-}
-.project-5 { 
-  grid-area: project5; 
-  background: url("../images/02-run-buddy.jpg");
-  background-size: cover; 
 }
 
 #work {
@@ -188,7 +203,7 @@ li a:hover {
     "section-subheading project4 project5"
   ;
   grid-gap: 10px;
-}
+} */
 
 /* contact section */
 
