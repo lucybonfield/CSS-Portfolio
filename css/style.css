@@ -41,6 +41,10 @@ h2 {
 :root {
   --teal: #A3D2C3;
   --grey: #676767;
+  --transparent: linear-gradient(
+    rgba(163, 210, 195, 0.7), 
+    rgba(163, 210, 195, 0.7)
+  );
 }
 
 /* nav bar / heading */
@@ -138,28 +142,38 @@ li a:hover {
 
 .project-1, .project-2, .project-3, .project-4, .project-5 {
   border: 5pt solid var(--teal);
+  opacity: .5;
+  cursor: pointer;
+}
+
+.project-1:hover, .project-2:hover, .project-3:hover, .project-4:hover, .project-5:hover { 
+  opacity: 1;
 }
 
 .project-1 { 
   grid-area: project1; 
-  background-image: url("../images/02-portfolio-1.jpg");
-  
+  background: url("../images/02-portfolio-1.jpg");
+  background-size: cover; 
 }
 .project-2 { 
   grid-area: project2; 
-  background-image: url("../images/02-portfolio-2.jpg");
+  background: url("../images/02-portfolio-2.jpg");
+  background-size: cover; 
 }
 .project-3 { 
   grid-area: project3; 
-  background-image: url("../images/02-portfolio-3.jpg");
+  background: url("../images/02-portfolio-3.jpg");
+  background-size: cover; 
 }
 .project-4 { 
   grid-area: project4; 
-  background-image: url("../images/02-portfolio-4.jpg");
+  background: url("../images/02-portfolio-4.jpg");
+  background-size: cover; 
 }
 .project-5 { 
   grid-area: project5; 
-  background-image: url("../images/02-run-buddy.jpg");
+  background: url("../images/02-run-buddy.jpg");
+  background-size: cover; 
 }
 
 #work {
