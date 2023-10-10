@@ -192,9 +192,12 @@ li a:hover {
   border: 5pt solid var(--teal);
 }
 
+#project-1 .project-img {
+  height: 300px;
+}
+
 .tile h3 {
   position: absolute;
-  bottom: 30px;
   background-color: var(--teal);
   padding: 10px;
 }
@@ -208,7 +211,7 @@ li a:hover {
   width: 100%;
   height: 700px;
   grid-template-columns: 200px 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 300px 1fr 1fr;
   grid-template-areas: 
     "section-subheading project1 project1"
     "section-subheading project2 project3"
@@ -234,6 +237,7 @@ li a:hover {
   column-gap: 50px;
   justify-content: center;
   align-items: center;
+  padding-top: 100px;
 }
 
 #contact p, #contact a {
@@ -244,7 +248,7 @@ li a:hover {
   color: rgb(99, 143, 246);
 }
 
-@media screen and (max-width: 8px) {
+@media screen and (max-width: 837px) {
   li {display: none;}
   .subtitle {display: none;}
 }
