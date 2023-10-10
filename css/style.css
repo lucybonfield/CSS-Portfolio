@@ -45,6 +45,7 @@ h2 {
     rgba(163, 210, 195, 0.7), 
     rgba(163, 210, 195, 0.7)
   );
+  --solid-border: 2px solid;
 }
 
 /* nav bar */
@@ -110,6 +111,7 @@ li a:hover {
   border-radius: 50%;
   margin-left: 100px;
   margin-top: 15px;
+  border: var(--solid-border) var(--grey);
 }
 
 .hero-banner h2 {
@@ -118,6 +120,7 @@ li a:hover {
   text-align: center;
   margin-left: 200px;
   margin-top: 150px;
+  border: var(--solid-border) var(--grey);
 }
 
 .hero-banner {
@@ -239,4 +242,9 @@ li a:hover {
 
 #contact a {
   color: rgb(99, 143, 246);
+}
+
+@media screen and (max-width: 8px) {
+  li {display: none;}
+  .subtitle {display: none;}
 }
